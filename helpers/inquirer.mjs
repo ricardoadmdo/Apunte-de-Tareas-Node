@@ -63,12 +63,12 @@ const pausa = async () => {
 	await inquirer.prompt(question);
 };
 
-const leerInput = async () => {
+const leerInput = async message => {
 	const question = [
 		{
 			type: 'input',
 			name: 'desc',
-			message: 'Ingrese una descripción: ',
+			message,
 			validate(value) {
 				if (value.length === 0) {
 					return 'Por favor ingrese un valor';
